@@ -21,7 +21,10 @@ public:
 
 private:
     std::string name;
-    double cannon; //how many mm
+    double id;
+public:
+    double getCannon() const;
+    //how many mm
 };
 
 

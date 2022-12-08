@@ -4,7 +4,7 @@
 
 #include "Tank.h"
 
-Tank::Tank(const std::string &name, double cannon) : name(name), cannon(cannon) {}
+Tank::Tank(const std::string &name, double cannon) : name(name), id(cannon) {}
 
 bool Tank::operator==(const Tank &rhs) const {
     return name == rhs.name;
@@ -12,8 +12,12 @@ bool Tank::operator==(const Tank &rhs) const {
 
 
 std::ostream &operator<<(std::ostream &os, const Tank &objects) {
-    os << "name: " << objects.name << " cannon: " << objects.cannon  << "mm";
+    os << "name: " << objects.name << " id: " << objects.id << "mm";
     return os;
+}
+
+double Tank::getCannon() const {
+    return id;
 }
 
 
