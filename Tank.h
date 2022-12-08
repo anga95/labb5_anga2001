@@ -11,8 +11,10 @@
 #include <array>
 #include <vector>
 
-class Tank {
+class Tank{
 public:
+    Tank() = default;
+    Tank(const std::string &name, double cannon);
     bool operator==(const Tank &rhs) const;
 
     friend std::ostream &operator<<(std::ostream &os, const Tank &objects);
@@ -20,7 +22,6 @@ public:
 private:
     std::string name;
     double cannon; //how many mm
-    std::vector<Tank> tanks;
 };
 
 
